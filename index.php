@@ -4,7 +4,7 @@ $peers = filter_input(INPUT_GET, 'p', FILTER_VALIDATE_INT, array('options' => ar
 $hours = filter_input(INPUT_GET, 'h', FILTER_VALIDATE_INT, array('options' => array('default'=>48)));
 $passkey = ("")?: (filter_input(INPUT_GET, 'k', FILTER_SANITIZE_STRING))?: exit("passkey not set!"); 
 //passkey is needed (recommend setting this here and never via get request to a remote server)
-$cat = filter_input(INPUT_GET, 'c', FILTER_VALIDATE_INT, array('options' => array('default'=>7)));
+$cat = filter_input(INPUT_GET, 'c', FILTER_VALIDATE_INT, array('options' => array('default'=>7))); //7 and 22 are main options for movies
 
 //OMDB
 $rating = filter_input(INPUT_GET, 'r', FILTER_VALIDATE_INT | FILTER_VALIDATE_FLOAT, array('options' => array('default'=>5.5))); // accepts a decimal
